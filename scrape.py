@@ -88,13 +88,17 @@ foodDict = defaultdict(list)
 blocks = bsObj.find_all("div", {"class" : "smith-menu-wrapper"})
 
 #Get information.
-count = 0
+# count = 0
+# for block in blocks:
+# 	count+=1
+# 	location = getDiningHall(block)
+# 	getMeal(block, foodDict, location)
+# 	if count == 1:
+# 		break
+
 for block in blocks:
-	count+=1
 	location = getDiningHall(block)
 	getMeal(block, foodDict, location)
-	if count == 1:
-		break
 
 pp = pprint.PrettyPrinter(compact=True)
 pp.pprint(foodDict)
